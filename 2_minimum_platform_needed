@@ -3,7 +3,8 @@ Minimum Number of Platforms Required for a Railway/Bus Station.
 
 
 
-Given arrival and departure times of all trains that reach a railway station, the task is to find the minimum number of platforms required for the railway station so that no train waits.
+Given arrival and departure times of all trains that reach a railway station, the task is to find the 
+minimum number of platforms required for the railway station so that no train waits.
 We are given two arrays which represent arrival and departure times of trains that stop
 
 
@@ -19,8 +20,10 @@ Output: 1
 */
 
 /*
-Approach : The main idea is to consider both the arrival and departure arrays in sorted order, by doing this we will be able to keep a track of the trains that have arrived
-but not yet departed , we'll know if a train has departed if the next train arrived has an arrival time more than the departed time of the last train.
+Approach : The main idea is to consider both the arrival and departure arrays in sorted order, 
+by doing this we will be able to keep a track of the trains that have arrived
+but not yet departed , we'll know if a train has departed if the next train arrived has an 
+arrival time more than the departed time of the last train.
 */
 
 
@@ -44,13 +47,15 @@ int minPlatform(int arr[], int dep[], int n)
   // ii and j will be used to iterate through arrival and departure respectively.
     while (i < n && j < n) { 
       
-      //if a train comes before the last train has departed we'll increment the no of platform required and check for the net train .
+      //if a train comes before the last train has departed we'll increment the no of platform required and 
+      check for the net train .
         if (arr[i] <= dep[j]) { 
             plat_needed++; 
             i++; 
         } 
   
-        //else if a train has arrived after the last train has departed then we'll decrement the no of patform required we'll do it as long as the previous trains have derparture time 
+        //else if a train has arrived after the last train has departed then we'll decrement the no of 
+        patform required we'll do it as long as the previous trains have derparture time 
         // less than the arrival time of the current train.
         else if (arr[i] > dep[j]) { 
             plat_needed--; 
