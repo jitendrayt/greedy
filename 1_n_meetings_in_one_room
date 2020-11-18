@@ -2,14 +2,17 @@
 
 Problem :-
 
-There is one meeting room in a firm. There are N meetings in the form of (S[i], F[i]) where S[i] is start time of meeting i and F[i] is finish time of meeting i.
+There is one meeting room in a firm. There are N meetings in the form of (S[i], F[i])
+where S[i] is start time of meeting i and F[i] is finish time of meeting i.
 What is the maximum number of meetings that can be accommodated in the meeting room?
 also print the correct order of meetings.
 
 
 Input:
 The first line of input consists number of the test cases. The description of T test cases is as follows:
-The first line consists of the size of the array, second line has the array containing the starting time of all the meetings each separated by a space, i.e., S [ i ]. And the third line has the array containing the finishing time of all the meetings each separated by a space, i.e., F [ i ].
+The first line consists of the size of the array, second line has the array containing the starting time of
+all the meetings each separated by a space, i.e., S [ i ]. And the third line has the array containing the 
+finishing time of all the meetings each separated by a space, i.e., F [ i ].
 
 Output:
 In each separate line print the order in which the meetings take place separated by a space.
@@ -23,9 +26,11 @@ the algorithm is as follws :-
 
 Step 1: Sort the activities according to their finishing time.
 
-step 2: Take the activity which is finishing at the earliest ( Greedy Choice :  which Leaves out most amount of time for other activities)
+step 2: Take the activity which is finishing at the earliest ( Greedy Choice :  which Leaves out most amount 
+of time for other activities)
 
-Step 3: Take the activity that is finishing earliest but also must start only after the last activity's finishing time since we can only have one activity at once.
+Step 3: Take the activity that is finishing earliest but also must start only after the last activity's
+finishing time since we can only have one activity at once.
 
 Step 4: repeat step 3 and 4 untill all the activities are exhausted.
 
